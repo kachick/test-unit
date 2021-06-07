@@ -39,15 +39,17 @@ writing tests, checking results and automated testing in Ruby.
 
 ## Install
 
-<pre>
-% sudo gem install test-unit
-</pre>
+```console
+% gem install test-unit
+1 gem installed
+```
 
 If you want to use full test-unit features:
 
-<pre>
-% sudo gem install test-unit-full
-</pre>
+```console
+% gem install test-unit-full
+some gems installed
+```
 
 ## License
 
