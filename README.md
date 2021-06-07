@@ -40,14 +40,14 @@ writing tests, checking results and automated testing in Ruby.
 ## Install
 
 ```console
-% gem install test-unit
+$ gem install test-unit
 1 gem installed
 ```
 
 If you want to use full test-unit features:
 
 ```console
-% gem install test-unit-full
+$ gem install test-unit-full
 some gems installed
 ```
 
