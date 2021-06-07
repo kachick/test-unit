@@ -1726,6 +1726,7 @@ EOT
 
       # Just for Ruby's tool/lib/test/unit compatibility.
       #
+      # @deprecated Use {#assert_all} instead.
       # @since 3.4.3
       alias_method :assert_all?, :assert_all
 
