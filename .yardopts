@@ -1,7 +1,7 @@
 --title test-unit
 --readme README.md
---markup markdown
---markup-provider kramdown
+--markup-provider=kramdown-parser-gfm
+--markup=markdown
 --files doc/text/**/*.*
 --output-dir doc/reference/en
 --charset utf-8

@@ -18,8 +18,25 @@ require "yaml"
 require "rubygems"
 require "rake/clean"
 require "yard"
+require 'kramdown'
+require 'kramdown-parser-gfm'
 require "bundler/gem_helper"
 require "packnga"
+
+
+# ref:
+#  * https://github.com/graphiti-api/graphiti-rails/blob/4a8a065f9c67cf0c3bcedfb7c8ac3da033560e57/.yardext.rb
+#  * https://github.com/graphiti-api/graphiti-rails/blob/master/.yardopts
+# Make new Kramdown class with Github Formatted Markdown on
+class KramdownGFM < Kramdown::Document
+  def initialize(text, opts={})
+    super(text, opts.merge(input: 'GFM', hard_wrap: false))
+  end
+end
+
+# Register new KramdownGFM
+YARD::Templates::Helpers::MarkupHelper::MARKUP_PROVIDERS[:markdown] <<
+  { lib: :"kramdown-parser-gfm", :const => "KramdownGFM" }
 
 task :default => :test
 
